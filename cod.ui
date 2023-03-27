@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cod</class>
+ <widget class="QMainWindow" name="cod">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <kerning>false</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>伪装目标检测</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/main_window.png</normaloff>icon/main_window.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(21, 25, 46)</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>1201</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="main_btn">
+     <property name="spacing">
+      <number>40</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>80</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>80</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="sel_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/sel_icon.png);
+	hover{background-color: rgb(112, 119, 186)};
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>选择图片</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="open_cmr">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/camera_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>打开相机</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="start_cod">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;	
+	icon: url(./icon/cod_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>开始检测</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/save_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>保存结果</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ext">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/ext_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>退出程序</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>1201</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="img_show">
+     <property name="spacing">
+      <number>50</number>
+     </property>
+     <property name="leftMargin">
+      <number>80</number>
+     </property>
+     <property name="rightMargin">
+      <number>80</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="ori_img">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 37, 63)</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="cod_img">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 37, 63)</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>60</y>
+      <width>491</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="sel_show">
+     <property name="spacing">
+      <number>30</number>
+     </property>
+     <property name="leftMargin">
+      <number>30</number>
+     </property>
+     <property name="rightMargin">
+      <number>30</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="ori_show">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:10px;
+	icon: url(./icon/show_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>显示原图</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ori_hide">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:10px;
+	icon: url(./icon/hide_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>去除原图</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>50</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正兰亭粗黑_GBK</family>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>伪 装 目 标 检 测</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sel_img</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>select_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>456</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ext</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>exit_app()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>978</x>
+     <y>606</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>905</x>
+     <y>456</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>open_cmr</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>open_camera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>604</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>460</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>start_cod</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>cod_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>607</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>705</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ori_show</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>ori_image_show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>677</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ori_hide</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>ori_image_hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>951</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>755</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_img</sender>
+   <signal>clicked()</signal>
+   <receiver>cod</receiver>
+   <slot>save_image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>792</x>
+     <y>609</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>871</x>
+     <y>542</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>select_image()</slot>
+  <slot>exit_app()</slot>
+  <slot>open_camera()</slot>
+  <slot>cod_image()</slot>
+  <slot>ori_image_show()</slot>
+  <slot>ori_image_hide()</slot>
+  <slot>save_image()</slot>
+ </slots>
+</ui>

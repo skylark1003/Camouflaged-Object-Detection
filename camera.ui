@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>camera</class>
+ <widget class="QMainWindow" name="camera">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>相机拍照</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/camera_window.png</normaloff>icon/camera_window.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(21, 25, 46)</string>
+   </property>
+   <widget class="QLabel" name="camera_video">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>500</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 37, 63)</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>0</y>
+      <width>151</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="take_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/take_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>拍 照</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="retake_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/retake_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>重 拍</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="confirm_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/confirm_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>确 定</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_img">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正正纤黑简体</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(76, 81, 127);
+	color: rgb(255, 255, 255);
+	border-radius:15px;
+	icon: url(./icon/cancel_icon.png);
+}
+QPushButton:hover{
+	background-color:rgb(119, 123, 177);
+}</string>
+       </property>
+       <property name="text">
+        <string>取 消</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancel_img</sender>
+   <signal>clicked()</signal>
+   <receiver>camera</receiver>
+   <slot>exit_camera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>639</x>
+     <y>411</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>720</x>
+     <y>497</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>take_img</sender>
+   <signal>clicked()</signal>
+   <receiver>camera</receiver>
+   <slot>take_photo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>740</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>retake_img</sender>
+   <signal>clicked()</signal>
+   <receiver>camera</receiver>
+   <slot>retake_photo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>733</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>confirm_img</sender>
+   <signal>clicked()</signal>
+   <receiver>camera</receiver>
+   <slot>confirm_photo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>737</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>exit_camera()</slot>
+  <slot>take_photo()</slot>
+  <slot>retake_photo()</slot>
+  <slot>confirm_photo()</slot>
+ </slots>
+</ui>
