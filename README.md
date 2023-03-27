@@ -1,0 +1,3 @@
+- 编码设计记录见：[PyQt简单入门知识点-实现伪装目标检测](https://skylark1003.github.io/2023/03/27/PyQt%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9-%E5%AE%9E%E7%8E%B0%E4%BC%AA%E8%A3%85%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/)
+- COD模型来自论文：[Simultaneously Localize, Segment and Rank the Camouflaged Objects](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Simultaneously_Localize_Segment_and_Rank_the_Camouflaged_Objects_CVPR_2021_paper.html)
+- 因为训练的模型过大，所以未上传至仓库，路径应当为：./model/Model_50_gen.pth
